@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>194</height>
+    <width>504</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>changeprofile</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(20, 181, 255), stop:1 rgb(255, 255, 255, 255))</string>
   </property>
   <widget class="QLabel" name="label_4">
    <property name="geometry">
@@ -22,11 +25,14 @@
      <height>41</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+   </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Personal Info&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>250</x>
@@ -37,17 +43,29 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="styleSheet">
+       <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_2"/>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="styleSheet">
+       <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+      </property>
+     </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_3"/>
+     <widget class="QLineEdit" name="lineEdit_3">
+      <property name="styleSheet">
+       <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>24</x>
@@ -64,6 +82,9 @@
         <pointsize>11</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+      </property>
       <property name="text">
        <string>Enter your new Email :</string>
       </property>
@@ -75,6 +96,9 @@
        <font>
         <pointsize>11</pointsize>
        </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
       </property>
       <property name="text">
        <string>Enter you'r new Password :</string>
@@ -88,12 +112,47 @@
         <pointsize>11</pointsize>
        </font>
       </property>
+      <property name="styleSheet">
+       <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+      </property>
       <property name="text">
        <string>Confirm  Your New Password :</string>
       </property>
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="applycode">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>190</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+   </property>
+   <property name="text">
+    <string>Apply</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancellogout">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>190</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
   </widget>
  </widget>
  <resources/>
