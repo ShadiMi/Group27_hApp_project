@@ -66,6 +66,8 @@ class loginWindow(QWidget, Ui_login):
 
     def loginfunc(self):
         user=self.usernameLF.text()
+        self.usernameLF='m7md'
+
         password=self.passwordLF.text()
 
 
@@ -113,10 +115,10 @@ class volunteerWindow(QWidget, Ui_volunteerprofile):
         self.progressBar.setMinimum(0)
         self.progressBar.setMaximum(200)
         self.progressBar.setValue(uv.points)
-        self.pushlogout.clicked.connect()
+        self.pushlogout.clicked.connect(self.gologout)
 
     def gologout(self):
-        self.windowLogout=volunteerWindow()
+        self.windowLogout=logoutWindow()
         self.close()
         self.windowLogout.show()
 
