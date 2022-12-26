@@ -15,9 +15,10 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCalendarWidget, QLCDNumber, QLabel,
-    QProgressBar, QPushButton, QSizePolicy, QSplitter,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCalendarWidget, QFrame, QLCDNumber,
+    QLabel, QListWidget, QListWidgetItem, QProgressBar,
+    QPushButton, QSizePolicy, QSplitter, QVBoxLayout,
+    QWidget)
 
 class Ui_volunteerprofile(object):
     def setupUi(self, volunteerprofile):
@@ -34,9 +35,9 @@ class Ui_volunteerprofile(object):
         self.pushlogout = QPushButton(volunteerprofile)
         self.pushlogout.setObjectName(u"pushlogout")
         self.pushlogout.setGeometry(QRect(0, 300, 141, 81))
-        self.collection = QPushButton(volunteerprofile)
-        self.collection.setObjectName(u"collection")
-        self.collection.setGeometry(QRect(0, 230, 141, 71))
+        self.services = QPushButton(volunteerprofile)
+        self.services.setObjectName(u"services")
+        self.services.setGeometry(QRect(0, 230, 141, 71))
         self.sumtotal = QLabel(volunteerprofile)
         self.sumtotal.setObjectName(u"sumtotal")
         self.sumtotal.setGeometry(QRect(20, 530, 107, 23))
@@ -62,18 +63,21 @@ class Ui_volunteerprofile(object):
         self.filler2.setGeometry(QRect(150, 530, 71, 20))
         self.filler2.setFont(font1)
         self.filler2.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground)")
-        self.calendarWidget = QCalendarWidget(volunteerprofile)
-        self.calendarWidget.setObjectName(u"calendarWidget")
-        self.calendarWidget.setGeometry(QRect(380, 310, 691, 471))
-        self.calendarWidget.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground)")
+        self.svCalendar = QCalendarWidget(volunteerprofile)
+        self.svCalendar.setObjectName(u"svCalendar")
+        self.svCalendar.setGeometry(QRect(290, 360, 501, 381))
+        font2 = QFont()
+        font2.setPointSize(12)
+        self.svCalendar.setFont(font2)
+        self.svCalendar.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground)")
         self.welcomemsg = QLabel(volunteerprofile)
         self.welcomemsg.setObjectName(u"welcomemsg")
         self.welcomemsg.setGeometry(QRect(380, 20, 187, 94))
-        font2 = QFont()
-        font2.setFamilies([u"Comic Sans MS"])
-        font2.setPointSize(30)
-        font2.setBold(True)
-        self.welcomemsg.setFont(font2)
+        font3 = QFont()
+        font3.setFamilies([u"Comic Sans MS"])
+        font3.setPointSize(30)
+        font3.setBold(True)
+        self.welcomemsg.setFont(font3)
         self.welcomemsg.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground),\n"
 "")
         self.welcomemsg.setTextFormat(Qt.AutoText)
@@ -97,14 +101,14 @@ class Ui_volunteerprofile(object):
         self.welcomemsg_3 = QLabel(volunteerprofile)
         self.welcomemsg_3.setObjectName(u"welcomemsg_3")
         self.welcomemsg_3.setGeometry(QRect(570, 20, 187, 94))
-        self.welcomemsg_3.setFont(font2)
+        self.welcomemsg_3.setFont(font3)
         self.welcomemsg_3.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground),\n"
 "")
         self.welcomemsg_3.setTextFormat(Qt.AutoText)
         self.welcomemsg_2 = QLabel(volunteerprofile)
         self.welcomemsg_2.setObjectName(u"welcomemsg_2")
         self.welcomemsg_2.setGeometry(QRect(500, 110, 591, 191))
-        self.welcomemsg_2.setFont(font2)
+        self.welcomemsg_2.setFont(font3)
         self.welcomemsg_2.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground),\n"
 "")
         self.welcomemsg_2.setTextFormat(Qt.AutoText)
@@ -124,6 +128,23 @@ class Ui_volunteerprofile(object):
         self.hrsIcd.setObjectName(u"hrsIcd")
         self.hrsIcd.setStyleSheet(u"background: black")
         self.splitter.addWidget(self.hrsIcd)
+        self.svListWidget = QListWidget(volunteerprofile)
+        self.svListWidget.setObjectName(u"svListWidget")
+        self.svListWidget.setGeometry(QRect(810, 360, 281, 381))
+        self.svListWidget.setStyleSheet(u"background:white")
+        self.svListWidget.setDefaultDropAction(Qt.MoveAction)
+        self.line = QFrame(volunteerprofile)
+        self.line.setObjectName(u"line")
+        self.line.setGeometry(QRect(790, 360, 21, 381))
+        self.line.setStyleSheet(u"background:black")
+        self.line.setFrameShape(QFrame.VLine)
+        self.line.setFrameShadow(QFrame.Sunken)
+        self.completeButton = QPushButton(volunteerprofile)
+        self.completeButton.setObjectName(u"completeButton")
+        self.completeButton.setGeometry(QRect(970, 750, 75, 23))
+        self.saveButton = QPushButton(volunteerprofile)
+        self.saveButton.setObjectName(u"saveButton")
+        self.saveButton.setGeometry(QRect(890, 750, 75, 23))
 
         self.retranslateUi(volunteerprofile)
 
@@ -133,7 +154,7 @@ class Ui_volunteerprofile(object):
     def retranslateUi(self, volunteerprofile):
         volunteerprofile.setWindowTitle(QCoreApplication.translate("volunteerprofile", u"volunteerprofile", None))
         self.pushlogout.setText(QCoreApplication.translate("volunteerprofile", u"Logout", None))
-        self.collection.setText(QCoreApplication.translate("volunteerprofile", u"Collection", None))
+        self.services.setText(QCoreApplication.translate("volunteerprofile", u"Services", None))
         self.sumtotal.setText(QCoreApplication.translate("volunteerprofile", u"Total hours :", None))
         self.filler1.setText(QCoreApplication.translate("volunteerprofile", u"0", None))
         self.sumpoint.setText(QCoreApplication.translate("volunteerprofile", u"Your Point :", None))
@@ -145,5 +166,7 @@ class Ui_volunteerprofile(object):
         self.welcomemsg_3.setText(QCoreApplication.translate("volunteerprofile", u"<html><head/><body><p><span style=\" font-style:italic;\">&lt;name&gt;</span></p></body></html>", None))
         self.welcomemsg_2.setText(QCoreApplication.translate("volunteerprofile", u"<html><head/><body><p>&lt;msg&gt;</p></body></html>", None))
         self.pushprofile.setText(QCoreApplication.translate("volunteerprofile", u"Profile", None))
+        self.completeButton.setText(QCoreApplication.translate("volunteerprofile", u"Complete", None))
+        self.saveButton.setText(QCoreApplication.translate("volunteerprofile", u"Save", None))
     # retranslateUi
 
