@@ -133,6 +133,9 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="../../Downloads/bg.qrc"/>
+  <include location="../../Downloads/capsuleButton.qrc"/>
+ </resources>
  <connections/>
 </ui>

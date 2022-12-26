@@ -89,7 +89,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.welcomeL.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Welcome </p></body></html>", None))
+        self.welcomeL.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Welcome</p></body></html>", None))
         self.login.setText(QCoreApplication.translate("MainWindow", u"Login ", None))
         self.createacc.setText(QCoreApplication.translate("MainWindow", u"Creat a new account", None))
         self.signL.setText(QCoreApplication.translate("MainWindow", u"Sign in or make a new account", None))
