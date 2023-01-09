@@ -14,7 +14,7 @@
    <string>confirmlogout</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(20, 181, 255), stop:1 rgb(255, 255, 255, 255))</string>
+   <string notr="true"/>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -37,7 +37,7 @@
     <string>Are you sure you want to log out :</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>80</x>
