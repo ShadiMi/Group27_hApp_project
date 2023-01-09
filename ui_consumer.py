@@ -15,18 +15,23 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QPushButton,
-    QSizePolicy, QWidget)
+from PySide6.QtWidgets import (QApplication, QCalendarWidget, QFrame, QLabel,
+    QListWidget, QListWidgetItem, QPushButton, QSizePolicy,
+    QWidget)
 
 class Ui_conumerprofile(object):
     def setupUi(self, conumerprofile):
         if not conumerprofile.objectName():
             conumerprofile.setObjectName(u"conumerprofile")
-        conumerprofile.resize(790, 470)
-        conumerprofile.setStyleSheet(u"background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(20, 181, 255), stop:1 rgba(255, 255, 255, 255))")
+        conumerprofile.resize(1280, 768)
+        conumerprofile.setStyleSheet(u"QFrame\n"
+"{\n"
+"background:rgba(140, 21, 49, 0.8);\n"
+"border-radius:15px;\n"
+"}")
         self.welcomelabel = QLabel(conumerprofile)
         self.welcomelabel.setObjectName(u"welcomelabel")
-        self.welcomelabel.setGeometry(QRect(10, 80, 161, 41))
+        self.welcomelabel.setGeometry(QRect(820, 40, 161, 41))
         font = QFont()
         font.setFamilies([u"MS Shell Dlg 2"])
         font.setPointSize(23)
@@ -34,43 +39,141 @@ class Ui_conumerprofile(object):
         self.welcomelabel.setFont(font)
         self.welcomelabel.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground)")
         self.welcomelabel.setTextFormat(Qt.AutoText)
-        self.profilecost = QPushButton(conumerprofile)
-        self.profilecost.setObjectName(u"profilecost")
-        self.profilecost.setGeometry(QRect(0, 0, 181, 61))
-        self.profilecost.setStyleSheet(u"")
-        self.collectioncost = QPushButton(conumerprofile)
-        self.collectioncost.setObjectName(u"collectioncost")
-        self.collectioncost.setGeometry(QRect(180, 0, 161, 61))
-        self.Couponcost = QPushButton(conumerprofile)
-        self.Couponcost.setObjectName(u"Couponcost")
-        self.Couponcost.setGeometry(QRect(340, 0, 171, 61))
-        self.Logoutcost = QPushButton(conumerprofile)
-        self.Logoutcost.setObjectName(u"Logoutcost")
-        self.Logoutcost.setGeometry(QRect(510, 0, 151, 61))
         self.sumpoint = QLabel(conumerprofile)
         self.sumpoint.setObjectName(u"sumpoint")
-        self.sumpoint.setGeometry(QRect(20, 260, 99, 23))
+        self.sumpoint.setGeometry(QRect(850, 170, 131, 31))
         font1 = QFont()
         font1.setPointSize(14)
+        font1.setBold(True)
         self.sumpoint.setFont(font1)
         self.sumpoint.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground)")
         self.sumpoint.setFrameShape(QFrame.NoFrame)
         self.sumpoint.setFrameShadow(QFrame.Plain)
         self.sumpoint.setLineWidth(1)
-        self.filler = QLabel(conumerprofile)
-        self.filler.setObjectName(u"filler")
-        self.filler.setGeometry(QRect(110, 165, 141, 21))
-        self.filler.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground)")
         self.welcomemsg = QLabel(conumerprofile)
         self.welcomemsg.setObjectName(u"welcomemsg")
-        self.welcomemsg.setGeometry(QRect(160, 80, 281, 141))
+        self.welcomemsg.setGeometry(QRect(980, 30, 281, 131))
+        font2 = QFont()
+        font2.setPointSize(20)
+        font2.setBold(True)
+        self.welcomemsg.setFont(font2)
         self.welcomemsg.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground),\n"
 "")
         self.points = QLabel(conumerprofile)
         self.points.setObjectName(u"points")
-        self.points.setGeometry(QRect(130, 260, 161, 31))
+        self.points.setGeometry(QRect(970, 170, 111, 31))
+        self.points.setFont(font1)
         self.points.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground),\n"
 "")
+        self.frame = QFrame(conumerprofile)
+        self.frame.setObjectName(u"frame")
+        self.frame.setGeometry(QRect(410, 280, 831, 401))
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.scCalendar = QCalendarWidget(self.frame)
+        self.scCalendar.setObjectName(u"scCalendar")
+        self.scCalendar.setGeometry(QRect(10, 10, 501, 381))
+        font3 = QFont()
+        font3.setPointSize(12)
+        self.scCalendar.setFont(font3)
+        self.scCalendar.setAutoFillBackground(False)
+        self.scCalendar.setStyleSheet(u"background:rgba(6, 16, 28,1);\n"
+"color:rgb(240, 150, 194)")
+        self.scCalendar.setGridVisible(True)
+        self.scListWidget = QListWidget(self.frame)
+        self.scListWidget.setObjectName(u"scListWidget")
+        self.scListWidget.setGeometry(QRect(530, 10, 281, 381))
+        self.scListWidget.setStyleSheet(u"background:rgba(255,255,255,0.7);")
+        self.scListWidget.setDefaultDropAction(Qt.MoveAction)
+        self.frame_2 = QFrame(conumerprofile)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setGeometry(QRect(0, 0, 781, 101))
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.cprofile = QPushButton(self.frame_2)
+        self.cprofile.setObjectName(u"cprofile")
+        self.cprofile.setGeometry(QRect(10, 10, 181, 81))
+        font4 = QFont()
+        font4.setFamilies([u"century gothic"])
+        font4.setPointSize(14)
+        font4.setBold(True)
+        self.cprofile.setFont(font4)
+        self.cprofile.setStyleSheet(u"QPushButton\n"
+"{\n"
+"color:white;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"color:#333;\n"
+"border-radius:10px;\n"
+"background:#49ebff;\n"
+"}\n"
+"QPushButton\n"
+"\n"
+"{\n"
+"background:rgba(6, 16, 28,1);\n"
+"}")
+        self.cservicesB = QPushButton(self.frame_2)
+        self.cservicesB.setObjectName(u"cservicesB")
+        self.cservicesB.setGeometry(QRect(200, 10, 181, 81))
+        self.cservicesB.setFont(font4)
+        self.cservicesB.setStyleSheet(u"QPushButton\n"
+"{\n"
+"color:white;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"color:#333;\n"
+"border-radius:10px;\n"
+"background:#49ebff;\n"
+"}\n"
+"QPushButton\n"
+"\n"
+"{\n"
+"background:rgba(6, 16, 28,1);\n"
+"}")
+        self.ccoupon = QPushButton(self.frame_2)
+        self.ccoupon.setObjectName(u"ccoupon")
+        self.ccoupon.setGeometry(QRect(390, 10, 181, 81))
+        self.ccoupon.setFont(font4)
+        self.ccoupon.setStyleSheet(u"QPushButton\n"
+"{\n"
+"color:white;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"color:#333;\n"
+"border-radius:10px;\n"
+"background:#49ebff;\n"
+"}\n"
+"QPushButton\n"
+"\n"
+"{\n"
+"background:rgba(6, 16, 28,1);\n"
+"}")
+        self.clogout = QPushButton(self.frame_2)
+        self.clogout.setObjectName(u"clogout")
+        self.clogout.setGeometry(QRect(580, 10, 181, 81))
+        self.clogout.setFont(font4)
+        self.clogout.setStyleSheet(u"QPushButton\n"
+"{\n"
+"color:white;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"color:#333;\n"
+"border-radius:10px;\n"
+"background:#49ebff;\n"
+"}\n"
+"QPushButton\n"
+"\n"
+"{\n"
+"background:rgba(6, 16, 28,1);\n"
+"}")
 
         self.retranslateUi(conumerprofile)
 
@@ -78,15 +181,14 @@ class Ui_conumerprofile(object):
     # setupUi
 
     def retranslateUi(self, conumerprofile):
-        conumerprofile.setWindowTitle(QCoreApplication.translate("conumerprofile", u"Costumerprofile", None))
+        conumerprofile.setWindowTitle(QCoreApplication.translate("conumerprofile", u"consumer", None))
         self.welcomelabel.setText(QCoreApplication.translate("conumerprofile", u"<html><head/><body><p><span style=\" font-size:22pt; font-style:italic; color:#000000;\">Welcome, </span></p></body></html>", None))
-        self.profilecost.setText(QCoreApplication.translate("conumerprofile", u"Profile ", None))
-        self.collectioncost.setText(QCoreApplication.translate("conumerprofile", u"Collection", None))
-        self.Couponcost.setText(QCoreApplication.translate("conumerprofile", u"Coupon", None))
-        self.Logoutcost.setText(QCoreApplication.translate("conumerprofile", u"Logout", None))
         self.sumpoint.setText(QCoreApplication.translate("conumerprofile", u"Your Point :", None))
-        self.filler.setText("")
-        self.welcomemsg.setText("")
-        self.points.setText("")
+        self.welcomemsg.setText(QCoreApplication.translate("conumerprofile", u"<name>", None))
+        self.points.setText(QCoreApplication.translate("conumerprofile", u"0", None))
+        self.cprofile.setText(QCoreApplication.translate("conumerprofile", u"Profile", None))
+        self.cservicesB.setText(QCoreApplication.translate("conumerprofile", u"Services", None))
+        self.ccoupon.setText(QCoreApplication.translate("conumerprofile", u"Coupons", None))
+        self.clogout.setText(QCoreApplication.translate("conumerprofile", u"Logout", None))
     # retranslateUi
 

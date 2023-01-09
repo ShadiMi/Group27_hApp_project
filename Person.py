@@ -5,11 +5,12 @@ class user():
         self.password=pw
 
 class volunteer(user):
-    def __int__(self, uname='', mail='', pw='',prof='',pts=0,vServices=None):
+    def __int__(self, uname='', mail='', pw='',prof='',pts=0,vServices=None,hrs=0):
         super().__int__()
         self.profile=prof
         self.points=pts
         self.servicesList=vServices
+        self.hours=hrs
 
 class consumer(user):
     def __int__(self, uname='', mail='', pw='',prof='',pts=0,cvServices=None):

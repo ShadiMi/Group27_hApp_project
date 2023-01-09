@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>504</width>
-    <height>400</height>
+    <width>732</width>
+    <height>518</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>changeprofile</string>
+   <string>Change Info</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(20, 181, 255), stop:1 rgb(255, 255, 255, 255))</string>
+   <string notr="true"/>
   </property>
-  <widget class="QLabel" name="label_4">
+  <widget class="QLabel" name="pLabel">
    <property name="geometry">
     <rect>
-     <x>110</x>
+     <x>270</x>
      <y>10</y>
      <width>171</width>
      <height>41</height>
@@ -29,54 +29,66 @@
     <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;Personal Info&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:14pt;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;Personal Info&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>250</x>
-     <y>50</y>
+     <x>260</x>
+     <y>200</y>
      <width>118</width>
      <height>121</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="newemailF">
       <property name="styleSheet">
        <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+      </property>
+      <property name="placeholderText">
+       <string>New Email</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="newpwF">
       <property name="styleSheet">
        <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>New Password</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="confirmnewpwF">
       <property name="styleSheet">
        <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+      </property>
+      <property name="placeholderText">
+       <string>Confirm new Password</string>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="layoutWidget2">
    <property name="geometry">
     <rect>
-     <x>24</x>
-     <y>49</y>
+     <x>34</x>
+     <y>199</y>
      <width>211</width>
      <height>120</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="newemailL">
       <property name="font">
        <font>
         <pointsize>11</pointsize>
@@ -91,7 +103,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="newpwL">
       <property name="font">
        <font>
         <pointsize>11</pointsize>
@@ -106,7 +118,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="cnewpwL">
       <property name="font">
        <font>
         <pointsize>11</pointsize>
@@ -116,17 +128,17 @@
        <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
       </property>
       <property name="text">
-       <string>Confirm  Your New Password :</string>
+       <string>Confirm Your New Password :</string>
       </property>
      </widget>
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="applycode">
+  <widget class="QPushButton" name="applyB">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>190</y>
+     <x>150</x>
+     <y>340</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -138,11 +150,11 @@
     <string>Apply</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="cancellogout">
+  <widget class="QPushButton" name="cancelB">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>190</y>
+     <x>230</x>
+     <y>340</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -152,6 +164,98 @@
    </property>
    <property name="text">
     <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cpwL">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>70</y>
+     <width>209</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+   </property>
+   <property name="text">
+    <string>Enter your current Password :</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="currentpwF">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>80</y>
+     <width>116</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+   </property>
+   <property name="placeholderText">
+    <string>Current Password</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="instructionsL">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>661</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fill in your new email and password if you want them changed, leave them blank if not &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="error">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>70</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground);
+color:red;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="error_2">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>280</y>
+     <width>201</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground);
+color:red;</string>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

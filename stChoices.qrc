@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="imges"/>
+  <qresource prefix="consumerChoicesimgs">
+    <file>hos.png</file>
+    <file>consulatin.png</file>
+    <file>lec2.png</file>
+  </qresource>
+</RCC>
