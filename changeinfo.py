@@ -62,7 +62,8 @@ class Ui_changeprofile(object):
     def retranslateUi(self, changeprofile):
         _translate = QtCore.QCoreApplication.translate
         changeprofile.setWindowTitle(_translate("changeprofile", "changeprofile"))
-        self.label_4.setText(_translate("changeprofile", "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">Personal Info</span></p><p align=\"center\"><span style=\" font-size:14pt;\"><br/></span></p></body></html>"))
+        self.label_4.setText(_translate("changeprofile",
+                                        "<html><head/><body><p align=\"center\"><span style=\" font-size:14pt;\">Personal Info</span></p><p align=\"center\"><span style=\" font-size:14pt;\"><br/></span></p></body></html>"))
         self.label.setText(_translate("changeprofile", "Enter your new Email :"))
         self.label_2.setText(_translate("changeprofile", "Enter you\'r new Password :"))
         self.label_3.setText(_translate("changeprofile", "Confirm  Your New Password :"))
@@ -70,6 +71,7 @@ class Ui_changeprofile(object):
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     changeprofile = QtWidgets.QWidget()
     ui = Ui_changeprofile()

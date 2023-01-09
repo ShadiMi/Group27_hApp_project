@@ -6,21 +6,25 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>790</width>
-    <height>470</height>
+    <width>1280</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Costumerprofile</string>
+   <string>consumer</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb(20, 181, 255), stop:1 rgb(255, 255, 255, 255))</string>
+   <string notr="true">QFrame
+{
+background:rgba(140, 21, 49, 0.8);
+border-radius:15px;
+}</string>
   </property>
   <widget class="QLabel" name="welcomelabel">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>80</y>
+     <x>820</x>
+     <y>40</y>
      <width>161</width>
      <height>41</height>
     </rect>
@@ -43,73 +47,20 @@
     <enum>Qt::AutoText</enum>
    </property>
   </widget>
-  <widget class="QPushButton" name="profilecost">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>181</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="text">
-    <string>Profile </string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="collectioncost">
-   <property name="geometry">
-    <rect>
-     <x>180</x>
-     <y>0</y>
-     <width>161</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Collection</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Couponcost">
-   <property name="geometry">
-    <rect>
-     <x>340</x>
-     <y>0</y>
-     <width>171</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Coupon</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="Logoutcost">
-   <property name="geometry">
-    <rect>
-     <x>510</x>
-     <y>0</y>
-     <width>151</width>
-     <height>61</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Logout</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="sumpoint">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>260</y>
-     <width>99</width>
-     <height>23</height>
+     <x>850</x>
+     <y>170</y>
+     <width>131</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
     </font>
    </property>
    <property name="styleSheet">
@@ -128,55 +79,282 @@
     <string>Your Point :</string>
    </property>
   </widget>
-  <widget class="QLabel" name="filler">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>165</y>
-     <width>141</width>
-     <height>21</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-  </widget>
   <widget class="QLabel" name="welcomemsg">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>80</y>
+     <x>980</x>
+     <y>30</y>
      <width>281</width>
-     <height>141</height>
+     <height>131</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground),
 </string>
    </property>
    <property name="text">
-    <string/>
+    <string>&lt;name&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="points">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>260</y>
-     <width>161</width>
+     <x>970</x>
+     <y>170</y>
+     <width>111</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="styleSheet">
     <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground),
 </string>
    </property>
    <property name="text">
-    <string/>
+    <string>0</string>
    </property>
+  </widget>
+  <widget class="QFrame" name="frame">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>280</y>
+     <width>831</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QCalendarWidget" name="scCalendar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>501</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:rgba(6, 16, 28,1);
+color:rgb(240, 150, 194)</string>
+    </property>
+    <property name="gridVisible">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="scListWidget">
+    <property name="geometry">
+     <rect>
+      <x>530</x>
+      <y>10</y>
+      <width>281</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:rgba(255,255,255,0.7);</string>
+    </property>
+    <property name="defaultDropAction">
+     <enum>Qt::MoveAction</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>781</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="cprofile">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+    </property>
+    <property name="text">
+     <string>Profile</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cservicesB">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>10</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+    </property>
+    <property name="text">
+     <string>Services</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ccoupon">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>10</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+    </property>
+    <property name="text">
+     <string>Coupons</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clogout">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+    </property>
+    <property name="text">
+     <string>Logout</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>
