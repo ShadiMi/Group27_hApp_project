@@ -33,7 +33,6 @@ border-radius:15px;
     <font>
      <family>MS Shell Dlg 2</family>
      <pointsize>23</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -59,7 +58,6 @@ border-radius:15px;
    <property name="font">
     <font>
      <pointsize>14</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -91,7 +89,6 @@ border-radius:15px;
    <property name="font">
     <font>
      <pointsize>20</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -115,7 +112,6 @@ border-radius:15px;
    <property name="font">
     <font>
      <pointsize>14</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -189,7 +185,7 @@ color:rgb(240, 150, 194)</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>781</width>
+     <width>621</width>
      <height>101</height>
     </rect>
    </property>
@@ -212,7 +208,6 @@ color:rgb(240, 150, 194)</string>
      <font>
       <family>century gothic</family>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -241,7 +236,7 @@ background:rgba(6, 16, 28,1);
    <widget class="QPushButton" name="cservicesB">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>210</x>
       <y>10</y>
       <width>181</width>
       <height>81</height>
@@ -251,7 +246,6 @@ background:rgba(6, 16, 28,1);
      <font>
       <family>century gothic</family>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -277,10 +271,10 @@ background:rgba(6, 16, 28,1);
      <string>Services</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="ccoupon">
+   <widget class="QPushButton" name="clogout">
     <property name="geometry">
      <rect>
-      <x>390</x>
+      <x>410</x>
       <y>10</y>
       <width>181</width>
       <height>81</height>
@@ -290,7 +284,96 @@ background:rgba(6, 16, 28,1);
      <font>
       <family>century gothic</family>
       <pointsize>14</pointsize>
-      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+    </property>
+    <property name="text">
+     <string>Logout</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>280</y>
+     <width>331</width>
+     <height>201</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLineEdit" name="couponF">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>90</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="placeholderText">
+     <string>Coupon</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cpnL">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:transparent
+</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700; color:#c2c2c2;&quot;&gt;Enter coupon:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ccoupon">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>0</y>
+      <width>181</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>14</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -316,20 +399,52 @@ background:rgba(6, 16, 28,1);
      <string>Coupons</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="clogout">
+   <widget class="QLabel" name="cpnInstructionL">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>100</x>
+      <y>150</y>
+      <width>221</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background:transparent
+</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700; color:#c2c2c2;&quot;&gt;letters are not case sensitive!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_4">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>480</y>
+     <width>121</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="confirmBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
       <y>10</y>
-      <width>181</width>
-      <height>81</height>
+      <width>101</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>century gothic</family>
-      <pointsize>14</pointsize>
-      <weight>75</weight>
+      <pointsize>12</pointsize>
       <bold>true</bold>
      </font>
     </property>
@@ -352,7 +467,7 @@ background:rgba(6, 16, 28,1);
 }</string>
     </property>
     <property name="text">
-     <string>Logout</string>
+     <string>Confirm</string>
     </property>
    </widget>
   </widget>

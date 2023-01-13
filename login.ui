@@ -257,7 +257,7 @@ background:skyblue;
     <string/>
    </property>
    <property name="icon">
-    <iconset resource="loginqrc.qrc">
+    <iconset resource="../../PycharmProjects/Group27_hApp_project/loginqrc.qrc">
      <normaloff>:/loginimgs/usericon.png</normaloff>:/loginimgs/usericon.png</iconset>
    </property>
    <property name="iconSize">
@@ -306,7 +306,7 @@ background:skyblue;
   </widget>
  </widget>
  <resources>
-  <include location="loginqrc.qrc"/>
+  <include location="../../PycharmProjects/Group27_hApp_project/loginqrc.qrc"/>
  </resources>
  <connections/>
 </ui>

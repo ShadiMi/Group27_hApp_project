@@ -1,4 +1,5 @@
 import datetime
+import os
 import sqlite3
 import sys
 
@@ -18,6 +19,7 @@ from ui_admin import Ui_Admin
 from ui_coupon import Ui_coupons
 from ui_changeinfo import Ui_changeprofile
 from ui_consumerServices import Ui_stChoices
+
 import Person
 import random
 
@@ -27,6 +29,19 @@ ua = Person.admin()
 uv.profile = None
 uc.profile = None
 ua.profile = None
+welcomeFlag=False
+loginFlag=False
+signupFlag=False
+volunteerFlag=False
+consumerFlag=False
+adminFlag=False
+volunteerServicesFlag=False
+consumerServicesFlag=False
+logoutFlag=False
+changeinfoFlag=False
+vCouponFlag=False
+
+
 
 
 def database(user):
@@ -68,9 +83,10 @@ def database(user):
 """------------------------------------------------------------------------------------------------------------------------------------
 Login Window"""
 class loginWindow(QWidget, Ui_login):
-
+    loginFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        #self.ui=Ui_login()
         self.setupUi(self)
         self.back.clicked.connect(self.gohome)
         self.loginL.clicked.connect(self.loginfunc)
@@ -143,6 +159,7 @@ class loginWindow(QWidget, Ui_login):
 """------------------------------------------------------------------------------------------------------------------------------------
 Volunteer's Services Window"""
 class volunteerServicesWindow(QWidget, Ui_vServices):
+    volunteerServicesFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setupUi(self)
@@ -229,6 +246,7 @@ class volunteerServicesWindow(QWidget, Ui_vServices):
 """------------------------------------------------------------------------------------------------------------------------------------
 Volunteer Window"""
 class volunteerWindow(QWidget, Ui_volunteerprofile):
+    volunteerFlag=True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -248,7 +266,7 @@ class volunteerWindow(QWidget, Ui_volunteerprofile):
         self.vprofile.clicked.connect(self.goprofile)
 
     def paintEvent(self, event):
-        self.tile = QPixmap("volunteerBG.jpg")
+        self.tile = QPixmap("volunteerBG.png")
         painter = QPainter(self)
         painter.drawTiledPixmap(self.rect(), self.tile)
         super(Ui_volunteerprofile, self)
@@ -319,6 +337,7 @@ class volunteerWindow(QWidget, Ui_volunteerprofile):
 """------------------------------------------------------------------------------------------------------------------------------------
 Consumer Window"""
 class consumerWindow(QWidget, Ui_conumerprofile):
+    consumerFlag=True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -330,6 +349,8 @@ class consumerWindow(QWidget, Ui_conumerprofile):
         self.cservicesB.clicked.connect(self.goCServices)
         self.welcomemsg.setText(uc.username)
         self.points.setText(str(uc.points))
+        self.confirmBtn.clicked.connect(self.confirmCoupon)
+
 
     def paintEvent(self, event):
         self.tile = QPixmap("consumerBG.jpg")
@@ -351,6 +372,49 @@ class consumerWindow(QWidget, Ui_conumerprofile):
         self.windowLogout = logoutWindow()
         self.windowLogout.otherWindows(self)
         self.windowLogout.show()
+
+    def confirmCoupon(self):
+        couponField=self.couponF.text()
+        print("TEST COUPONS:",couponField)
+        couponField=couponField.upper()
+        print("TEST COUPONS:", couponField)
+        db = sqlite3.connect('hAppDB.db')
+        print("Opened database successfully")
+        cursor = db.cursor()
+        query = "SELECT Coupon,cStatus,Pts FROM couponsTB WHERE Coupon=?"
+        result = cursor.execute(query,[couponField]).fetchone()
+        print('result is: ', result)
+
+
+        if result is None:
+            self.cpnInstructionL.setStyleSheet('Color:red;\n Background:rgba(6, 16, 28,1)')
+            self.cpnInstructionL.setText('  Coupon does not exist!')
+
+        elif result[1]=='Available':
+            uc.points=uc.points+result[2]
+            query="UPDATE couponsTB SET cStatus='Unavailable' WHERE Coupon=?"
+            cursor.execute(query,[couponField])
+            db.commit()
+            query="UPDATE users SET Points=? WHERE Username=?"
+            row=(uc.points,uc.username)
+            cursor.execute(query,row)
+            db.commit()
+
+            self.cpnInstructionL.setStyleSheet('Color:red;\n Background:rgba(6, 16, 28,1)')
+            self.cpnInstructionL.setText(' Coupon redeemed, points added!')
+            self.points.setText(str(uc.points))
+
+        else:
+            self.cpnInstructionL.setStyleSheet('Color:red;\n Background:rgba(6, 16, 28,1)')
+            self.cpnInstructionL.setText(' Coupon already been redeemed!')
+
+
+
+
+
+
+
+
 
     def calendarDateChanged(self):
         print("The calendar date was changed.")
@@ -375,6 +439,7 @@ class consumerWindow(QWidget, Ui_conumerprofile):
 """------------------------------------------------------------------------------------------------------------------------------------
 Conumers Services Window"""
 class consumerServicesWindow(QWidget, Ui_stChoices):
+    consumerServicesFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setupUi(self)
@@ -525,6 +590,7 @@ class consumerServicesWindow(QWidget, Ui_stChoices):
 """------------------------------------------------------------------------------------------------------------------------------------
 Signup Window"""
 class signupWindow(QWidget, Ui_create):
+    signupFlag=True
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -584,6 +650,7 @@ class signupWindow(QWidget, Ui_create):
 """------------------------------------------------------------------------------------------------------------------------------------
 Logout Window"""
 class logoutWindow(QWidget, Ui_confirmlogout):
+    logoutFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setupUi(self)
@@ -609,12 +676,13 @@ class logoutWindow(QWidget, Ui_confirmlogout):
 """------------------------------------------------------------------------------------------------------------------------------------
 Welcome Window"""
 class MainWindow(QMainWindow, Ui_MainWindow):
-
+    welcomeFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.setupUi(self)
-        self.login.clicked.connect(self.gotologin)
-        self.createacc.clicked.connect(self.gotoSignup)
+        self.ui=Ui_MainWindow()
+        self.ui.setupUi(self)
+        self.ui.login.clicked.connect(self.gotologin)
+        self.ui.createacc.clicked.connect(self.gotoSignup)
 
     def paintEvent(self, event):
         self.tile = QPixmap("welcomeBG.jpg")
@@ -636,7 +704,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 """------------------------------------------------------------------------------------------------------------------------------------
 Admin Window"""
 class adminWindow(QWidget, Ui_Admin):
-
+    adminFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setupUi(self)
@@ -648,6 +716,13 @@ class adminWindow(QWidget, Ui_Admin):
         self.logoutPB.clicked.connect(self.gologout)
         self.deleteU.clicked.connect(self.deleteUser)
         self.resetPw.clicked.connect(self.resetPassword)
+        self.addPointsPB.clicked.connect(self.addPoints)
+
+    def paintEvent(self, event):
+        self.tile = QPixmap("consumerBG.jpg")
+        painter = QPainter(self)
+        painter.drawTiledPixmap(self.rect(), self.tile)
+        super(Ui_Admin, self)
 
     def gologout(self):
         self.windowLogout = logoutWindow()
@@ -666,6 +741,8 @@ class adminWindow(QWidget, Ui_Admin):
         self.windowA.show()
 
     def aTable(self):
+        self.sTable.setStyleSheet("font-weight:bold;\n color:rgb(132,132,132)")
+        self.uTable.setStyleSheet("font-weight:bold;\n color:rgb(132,132,132)")
         conn = sqlite3.connect("hAppDB.db")
         cur = conn.cursor()
         query = 'SELECT serviceID,Username,servicetype,servicename,Date,Length,Status FROM servicesTB'
@@ -769,10 +846,29 @@ class adminWindow(QWidget, Ui_Admin):
         self.goAdmin()
         self.uWidget()
 
+    def addPoints(self):
+        conn = sqlite3.connect("hAppDB.db")
+        cur = conn.cursor()
+        uname = self.uTable.selectedItems().pop(1).text()
+        pts= self.uTable.selectedItems().pop(3).text()
+        addedPts=self.pointsF.text()
+        pts=int(pts)+int(addedPts)
+        print(uname)
+        row=(pts,uname)
+
+        query = 'UPDATE users SET Points=? WHERE Username=? '
+        cur.execute(query, row)
+        conn.commit()
+        print('Deleted')
+        cur.close()
+        self.goAdmin()
+        self.uWidget()
+
 
 """------------------------------------------------------------------------------------------------------------------------------------
 User's infomation change Window"""
 class changeInfoWindow(QWidget, Ui_changeprofile):
+    changeinfoFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setupUi(self)
@@ -864,6 +960,7 @@ class changeInfoWindow(QWidget, Ui_changeprofile):
 """------------------------------------------------------------------------------------------------------------------------------------
 Volunteer's Coupons Window"""
 class couponWindow(QWidget, Ui_coupons):
+    vCouponFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.setupUi(self)
@@ -934,6 +1031,7 @@ class couponWindow(QWidget, Ui_coupons):
 
 
 if __name__ == "__main__":
+
     if not QApplication.instance():
         app = QApplication(sys.argv)
     else:

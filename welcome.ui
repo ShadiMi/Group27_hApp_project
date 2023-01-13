@@ -109,7 +109,6 @@ color:rgb(194, 194, 194)</string>
       <font>
        <family>Bookman Old Style</family>
        <pointsize>36</pointsize>
-       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>

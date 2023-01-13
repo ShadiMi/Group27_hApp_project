@@ -386,7 +386,7 @@ class Ui_stChoices(object):
 "}")
         self.error = QLabel(self.frame_3)
         self.error.setObjectName(u"error")
-        self.error.setGeometry(QRect(40, 30, 211, 20))
+        self.error.setGeometry(QRect(30, 30, 221, 20))
         self.error.setStyleSheet(u"background:transparent;\n"
 "color:red;")
         self.frame_4 = QFrame(stChoices)
@@ -549,6 +549,6 @@ class Ui_stChoices(object):
         self.error.setText("")
         self.back.setText(QCoreApplication.translate("stChoices", u"Back", None))
         self.pushButton_2.setText(QCoreApplication.translate("stChoices", u"Available Services", None))
-        self.pushButton_3.setText(QCoreApplication.translate("stChoices", u"Schedual", None))
+        self.pushButton_3.setText(QCoreApplication.translate("stChoices", u"Schedule", None))
     # retranslateUi
 

@@ -44,7 +44,6 @@ border-radius:15px;
     <font>
      <family>Comic Sans MS</family>
      <pointsize>30</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -72,7 +71,6 @@ border-radius:15px;
     <font>
      <family>Comic Sans MS</family>
      <pointsize>30</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -100,7 +98,6 @@ border-radius:15px;
     <font>
      <family>Comic Sans MS</family>
      <pointsize>30</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -193,7 +190,6 @@ border-radius:15px;
      <font>
       <family>century gothic</family>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -232,7 +228,6 @@ background:rgb(0, 140, 227);
      <font>
       <family>century gothic</family>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -271,7 +266,6 @@ background:rgb(0, 140, 227);
      <font>
       <family>century gothic</family>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -310,7 +304,6 @@ background:rgb(0, 140, 227);
      <font>
       <family>century gothic</family>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -348,7 +341,6 @@ background:rgb(0, 140, 227);
     <property name="font">
      <font>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -372,7 +364,6 @@ color:rgb(194, 194, 194)</string>
     <property name="font">
      <font>
       <pointsize>14</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -503,7 +494,6 @@ color:rgb(194, 194, 194)</string>
     <widget class="QLCDNumber" name="hrsIcd">
      <property name="font">
       <font>
-       <weight>50</weight>
        <bold>false</bold>
       </font>
      </property>

@@ -13,53 +13,27 @@
   <property name="windowTitle">
    <string>Admin</string>
   </property>
-  <widget class="QPushButton" name="usersPB">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>120</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Users</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="servicesPB">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>150</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Services</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="logoutPB">
-   <property name="geometry">
-    <rect>
-     <x>60</x>
-     <y>400</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>logout</string>
-   </property>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true">
+QFrame
+{
+background:rgba(99, 0, 0,0.7);
+border-radius:15px;
+}
+
+</string>
+  </property>
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>280</x>
      <y>30</y>
      <width>871</width>
      <height>651</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:rgba(99, 0, 0,0.3);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::Panel</enum>
@@ -71,7 +45,7 @@
     <number>5</number>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
    <widget class="QWidget" name="spage">
     <widget class="QTableWidget" name="sTable">
@@ -92,9 +66,21 @@
      <property name="sortingEnabled">
       <bool>true</bool>
      </property>
+     <property name="cornerButtonEnabled">
+      <bool>true</bool>
+     </property>
      <property name="rowCount">
       <number>100</number>
      </property>
+     <attribute name="horizontalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
+     <attribute name="horizontalHeaderCascadingSectionResizes">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>true</bool>
+     </attribute>
      <row/>
      <row/>
      <row/>
@@ -202,7 +188,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -214,7 +199,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -226,7 +210,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -238,7 +221,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -250,7 +232,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -262,7 +243,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -274,7 +254,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -292,22 +271,49 @@
      <property name="font">
       <font>
        <pointsize>13</pointsize>
-       <weight>75</weight>
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background:transparent</string>
+     </property>
      <property name="text">
-      <string>Services</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#c2c2c2;&quot;&gt;Services&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
     </widget>
     <widget class="QPushButton" name="complete">
      <property name="geometry">
       <rect>
-       <x>100</x>
+       <x>180</x>
        <y>610</y>
-       <width>75</width>
-       <height>23</height>
+       <width>101</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>century gothic</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
      </property>
      <property name="text">
       <string>Approve</string>
@@ -316,11 +322,36 @@
     <widget class="QPushButton" name="decline">
      <property name="geometry">
       <rect>
-       <x>220</x>
+       <x>300</x>
        <y>610</y>
-       <width>75</width>
-       <height>23</height>
+       <width>101</width>
+       <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>century gothic</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
      </property>
      <property name="text">
       <string>Decline</string>
@@ -336,6 +367,9 @@
        <width>861</width>
        <height>561</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:rgba(99, 0, 0,0.3);</string>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
@@ -465,7 +499,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -477,7 +510,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -489,7 +521,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -501,7 +532,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -513,7 +543,6 @@
       <property name="font">
        <font>
         <pointsize>10</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -531,9 +560,11 @@
      <property name="font">
       <font>
        <pointsize>13</pointsize>
-       <weight>75</weight>
        <bold>true</bold>
       </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:transparent</string>
      </property>
      <property name="text">
       <string>Users</string>
@@ -542,43 +573,319 @@
     <widget class="QPushButton" name="deleteU">
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>380</x>
        <y>610</y>
-       <width>75</width>
-       <height>23</height>
+       <width>111</width>
+       <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>century gothic</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(99, 0, 0,0.7);
+}</string>
+     </property>
      <property name="text">
-      <string>Delete</string>
+      <string>Delete User</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="addPointsPB">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>610</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>century gothic</family>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+     </property>
+     <property name="text">
+      <string>Add Points</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="pointsF">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>610</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(194, 194, 194);
+background:rgba(6, 16, 28,1);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Points</string>
      </property>
     </widget>
    </widget>
   </widget>
-  <widget class="QPushButton" name="resetPw">
+  <widget class="QFrame" name="frame_4">
    <property name="geometry">
     <rect>
-     <x>370</x>
-     <y>710</y>
-     <width>91</width>
-     <height>23</height>
+     <x>160</x>
+     <y>280</y>
+     <width>121</width>
+     <height>111</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Reset Password</string>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
    </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="servicesPB">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+    </property>
+    <property name="text">
+     <string>Services</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="usersPB">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+    </property>
+    <property name="text">
+     <string>Users</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QLineEdit" name="userR">
+  <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>260</x>
-     <y>710</y>
-     <width>101</width>
-     <height>20</height>
+     <x>90</x>
+     <y>630</y>
+     <width>141</width>
+     <height>51</height>
     </rect>
    </property>
-   <property name="placeholderText">
-    <string>Username</string>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
    </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="logoutPB">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+    </property>
+    <property name="text">
+     <string>Logout</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="frame_2">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>80</y>
+     <width>151</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLineEdit" name="userR">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Username</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="resetPw">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>century gothic</family>
+      <pointsize>12</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgba(6, 16, 28,1);
+}</string>
+    </property>
+    <property name="text">
+     <string>Reset Password</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources/>

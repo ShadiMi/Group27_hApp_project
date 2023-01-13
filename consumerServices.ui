@@ -69,7 +69,7 @@ background:skyblue
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="stChoices.qrc">
+     <iconset resource="../../PycharmProjects/Group27_hApp_project/stChoices.qrc">
       <normaloff>:/consumerChoicesimgs/hos.png</normaloff>:/consumerChoicesimgs/hos.png</iconset>
     </property>
     <property name="iconSize">
@@ -110,7 +110,7 @@ background:skyblue;
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="stChoices.qrc">
+     <iconset resource="../../PycharmProjects/Group27_hApp_project/stChoices.qrc">
       <normaloff>:/consumerChoicesimgs/consulatin.png</normaloff>:/consumerChoicesimgs/consulatin.png</iconset>
     </property>
     <property name="iconSize">
@@ -157,7 +157,7 @@ background:skyblue;
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="stChoices.qrc">
+     <iconset resource="../../PycharmProjects/Group27_hApp_project/stChoices.qrc">
       <normaloff>:/consumerChoicesimgs/lec2.png</normaloff>:/consumerChoicesimgs/lec2.png</iconset>
     </property>
     <property name="iconSize">
@@ -179,7 +179,6 @@ background:skyblue;
     <property name="font">
      <font>
       <family>century gothic</family>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -210,7 +209,6 @@ background:transparent;
     <property name="font">
      <font>
       <family>century gothic</family>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -241,7 +239,6 @@ background:transparent;
     <property name="font">
      <font>
       <family>century gothic</family>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -294,7 +291,7 @@ background:skyblue;
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="stChoices.qrc">
+     <iconset resource="../../PycharmProjects/Group27_hApp_project/stChoices.qrc">
       <normaloff>:/consumerChoicesimgs/lec2.png</normaloff>:/consumerChoicesimgs/lec2.png</iconset>
     </property>
     <property name="iconSize">
@@ -316,7 +313,6 @@ background:skyblue;
     <property name="font">
      <font>
       <family>century gothic</family>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -349,7 +345,6 @@ background:transparent;
     <font>
      <family>century gothic</family>
      <pointsize>19</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -389,7 +384,6 @@ border-radius:15px;
     <font>
      <family>century gothic</family>
      <pointsize>14</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -410,7 +404,6 @@ border-radius:15px;
     <font>
      <family>century gothic</family>
      <pointsize>14</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -496,7 +489,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -507,7 +499,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -518,7 +509,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -529,7 +519,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -540,7 +529,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -551,7 +539,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -562,7 +549,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -617,7 +603,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -628,7 +613,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -639,7 +623,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -650,7 +633,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -661,7 +643,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -672,7 +653,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -683,7 +663,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -738,7 +717,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -749,7 +727,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -760,7 +737,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -771,7 +747,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -782,7 +757,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -793,7 +767,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -804,7 +777,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -859,7 +831,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -870,7 +841,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -881,7 +851,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -892,7 +861,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -903,7 +871,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -914,7 +881,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -925,7 +891,6 @@ border-radius:15px;
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
          <bold>true</bold>
         </font>
        </property>
@@ -962,7 +927,6 @@ border-radius:15px;
      <font>
       <family>century gothic</family>
       <pointsize>12</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -1034,7 +998,6 @@ color:red;</string>
      <font>
       <family>century gothic</family>
       <pointsize>12</pointsize>
-      <weight>75</weight>
       <bold>true</bold>
      </font>
     </property>
@@ -1103,7 +1066,6 @@ background:rgba(6, 16, 28,1);
     <font>
      <family>century gothic</family>
      <pointsize>19</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -1143,7 +1105,6 @@ border-radius:15px;
     <font>
      <family>century gothic</family>
      <pointsize>19</pointsize>
-     <weight>75</weight>
      <bold>true</bold>
     </font>
    </property>
@@ -1172,7 +1133,7 @@ border-radius:15px;
   </widget>
  </widget>
  <resources>
-  <include location="stChoices.qrc"/>
+  <include location="../../PycharmProjects/Group27_hApp_project/stChoices.qrc"/>
  </resources>
  <connections/>
 </ui>
