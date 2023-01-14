@@ -69,7 +69,7 @@ background:skyblue
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../../PycharmProjects/Group27_hApp_project/stChoices.qrc">
+     <iconset resource="stChoices.qrc">
       <normaloff>:/consumerChoicesimgs/hos.png</normaloff>:/consumerChoicesimgs/hos.png</iconset>
     </property>
     <property name="iconSize">
@@ -110,7 +110,7 @@ background:skyblue;
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../../PycharmProjects/Group27_hApp_project/stChoices.qrc">
+     <iconset resource="stChoices.qrc">
       <normaloff>:/consumerChoicesimgs/consulatin.png</normaloff>:/consumerChoicesimgs/consulatin.png</iconset>
     </property>
     <property name="iconSize">
@@ -157,7 +157,7 @@ background:skyblue;
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../../PycharmProjects/Group27_hApp_project/stChoices.qrc">
+     <iconset resource="stChoices.qrc">
       <normaloff>:/consumerChoicesimgs/lec2.png</normaloff>:/consumerChoicesimgs/lec2.png</iconset>
     </property>
     <property name="iconSize">
@@ -291,7 +291,7 @@ background:skyblue;
      <string/>
     </property>
     <property name="icon">
-     <iconset resource="../../PycharmProjects/Group27_hApp_project/stChoices.qrc">
+     <iconset resource="stChoices.qrc">
       <normaloff>:/consumerChoicesimgs/lec2.png</normaloff>:/consumerChoicesimgs/lec2.png</iconset>
     </property>
     <property name="iconSize">
@@ -387,6 +387,9 @@ border-radius:15px;
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(194, 194, 194)</string>
+   </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c2c2c2;&quot;&gt;Name&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
@@ -406,6 +409,9 @@ border-radius:15px;
      <pointsize>14</pointsize>
      <bold>true</bold>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:rgb(194, 194, 194)</string>
    </property>
    <property name="text">
     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#c2c2c2;&quot;&gt;Points&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1133,7 +1139,7 @@ border-radius:15px;
   </widget>
  </widget>
  <resources>
-  <include location="../../PycharmProjects/Group27_hApp_project/stChoices.qrc"/>
+  <include location="stChoices.qrc"/>
  </resources>
  <connections/>
 </ui>

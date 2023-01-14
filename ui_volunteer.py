@@ -25,7 +25,8 @@ class Ui_volunteerprofile(object):
         if not volunteerprofile.objectName():
             volunteerprofile.setObjectName(u"volunteerprofile")
         volunteerprofile.resize(1280, 768)
-        volunteerprofile.setStyleSheet(u"QFrame\n"
+        volunteerprofile.setStyleSheet(u"color:rgb(152, 152, 152);\n"
+"QFrame\n"
 "{\n"
 "background:rgba(6, 16, 28, 0.8);\n"
 "border-radius:15px;\n"

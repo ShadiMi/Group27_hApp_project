@@ -26,28 +26,38 @@ class Ui_coupons(object):
         coupons.resize(919, 672)
         self.filler1 = QLabel(coupons)
         self.filler1.setObjectName(u"filler1")
-        self.filler1.setGeometry(QRect(180, 50, 71, 21))
+        self.filler1.setGeometry(QRect(190, 50, 71, 31))
         font = QFont()
         font.setPointSize(14)
         font.setBold(True)
         self.filler1.setFont(font)
-        self.filler1.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground)")
+        self.filler1.setStyleSheet(u"color:white;\n"
+"text-align:center;\n"
+"background:rgba(6, 16, 28,1);\n"
+"border-radius:15px;")
         self.sumpoint = QLabel(coupons)
         self.sumpoint.setObjectName(u"sumpoint")
-        self.sumpoint.setGeometry(QRect(50, 50, 131, 23))
+        self.sumpoint.setGeometry(QRect(50, 50, 131, 31))
         self.sumpoint.setFont(font)
-        self.sumpoint.setStyleSheet(u"background:setAttribute(Qt::WA_TranslucentBackground)")
+        self.sumpoint.setStyleSheet(u"color:white;\n"
+"text-align:center;\n"
+"background:rgba(6, 16, 28,1);\n"
+"border-radius:15px;")
         self.label = QLabel(coupons)
         self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(50, 100, 451, 21))
+        self.label.setGeometry(QRect(50, 90, 411, 31))
         font1 = QFont()
         font1.setPointSize(13)
         font1.setBold(True)
         self.label.setFont(font1)
+        self.label.setStyleSheet(u"color:white;\n"
+"text-align:center;\n"
+"background:rgba(6, 16, 28,1);\n"
+"border-radius:15px;")
         self.label.setScaledContents(False)
         self.ptsF = QLineEdit(coupons)
         self.ptsF.setObjectName(u"ptsF")
-        self.ptsF.setGeometry(QRect(470, 100, 81, 20))
+        self.ptsF.setGeometry(QRect(480, 100, 81, 20))
         self.ptsF.setEchoMode(QLineEdit.Normal)
         self.ptsF.setClearButtonEnabled(True)
         self.stackedWidget = QStackedWidget(coupons)
@@ -62,6 +72,10 @@ class Ui_coupons(object):
         font2.setPointSize(12)
         font2.setBold(True)
         self.label_2.setFont(font2)
+        self.label_2.setStyleSheet(u"color:white;\n"
+"text-align:center;\n"
+"background:rgba(6, 16, 28,1);\n"
+"border-radius:15px;")
         self.label_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.stackedWidget.addWidget(self.info)
         self.history = QWidget()
@@ -76,22 +90,102 @@ class Ui_coupons(object):
         font3.setPointSize(10)
         font3.setBold(True)
         self.label_3.setFont(font3)
+        self.label_3.setStyleSheet(u"color:rgb(194, 194, 194)")
         self.stackedWidget.addWidget(self.history)
         self.History = QPushButton(coupons)
         self.History.setObjectName(u"History")
         self.History.setGeometry(QRect(170, 340, 141, 71))
-        self.generate = QPushButton(coupons)
-        self.generate.setObjectName(u"generate")
-        self.generate.setGeometry(QRect(470, 130, 121, 31))
-        self.infobtn = QPushButton(coupons)
-        self.infobtn.setObjectName(u"infobtn")
-        self.infobtn.setGeometry(QRect(170, 270, 141, 71))
-        self.backv = QPushButton(coupons)
-        self.backv.setObjectName(u"backv")
-        self.backv.setGeometry(QRect(20, 10, 75, 23))
+        font4 = QFont()
+        font4.setPointSize(11)
+        font4.setBold(True)
+        self.History.setFont(font4)
+        self.History.setStyleSheet(u"QPushButton\n"
+"{\n"
+"color:white;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"color:#333;\n"
+"border-radius:10px;\n"
+"background:#49ebff;\n"
+"}\n"
+"QPushButton\n"
+"\n"
+"{\n"
+"background:rgb(0, 140, 227);\n"
+"}")
         self.error = QLabel(coupons)
         self.error.setObjectName(u"error")
-        self.error.setGeometry(QRect(560, 100, 291, 16))
+        self.error.setGeometry(QRect(570, 100, 171, 21))
+        self.backv = QPushButton(coupons)
+        self.backv.setObjectName(u"backv")
+        self.backv.setGeometry(QRect(20, 10, 91, 31))
+        font5 = QFont()
+        font5.setFamilies([u"century gothic"])
+        font5.setPointSize(14)
+        font5.setBold(True)
+        self.backv.setFont(font5)
+        self.backv.setStyleSheet(u"QPushButton\n"
+"{\n"
+"color:white;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"color:#333;\n"
+"border-radius:10px;\n"
+"background:#49ebff;\n"
+"}\n"
+"QPushButton\n"
+"\n"
+"{\n"
+"background:rgb(0, 140, 227);\n"
+"}")
+        self.generate = QPushButton(coupons)
+        self.generate.setObjectName(u"generate")
+        self.generate.setGeometry(QRect(480, 130, 141, 31))
+        font6 = QFont()
+        font6.setFamilies([u"Segoe UI"])
+        font6.setPointSize(11)
+        font6.setBold(True)
+        self.generate.setFont(font6)
+        self.generate.setStyleSheet(u"QPushButton\n"
+"{\n"
+"color:white;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"color:#333;\n"
+"border-radius:10px;\n"
+"background:#49ebff;\n"
+"}\n"
+"QPushButton\n"
+"\n"
+"{\n"
+"background:rgb(0, 140, 227);\n"
+"}")
+        self.infobtn = QPushButton(coupons)
+        self.infobtn.setObjectName(u"infobtn")
+        self.infobtn.setGeometry(QRect(170, 260, 141, 71))
+        self.infobtn.setFont(font6)
+        self.infobtn.setStyleSheet(u"QPushButton\n"
+"{\n"
+"color:white;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"color:#333;\n"
+"border-radius:10px;\n"
+"background:#49ebff;\n"
+"}\n"
+"QPushButton\n"
+"\n"
+"{\n"
+"background:rgb(0, 140, 227);\n"
+"}")
 
         self.retranslateUi(coupons)
 
@@ -103,15 +197,15 @@ class Ui_coupons(object):
 
     def retranslateUi(self, coupons):
         coupons.setWindowTitle(QCoreApplication.translate("coupons", u"Coupons", None))
-        self.filler1.setText(QCoreApplication.translate("coupons", u"0", None))
-        self.sumpoint.setText(QCoreApplication.translate("coupons", u"Your Points :", None))
-        self.label.setText(QCoreApplication.translate("coupons", u"Enter the amount of points you want to convert:", None))
-        self.label_2.setText(QCoreApplication.translate("coupons", u"<html><head/><body><p>Services Cost:</p><p><br/></p><p align=\"center\">Advice: 50 points</p><p align=\"center\">Lecture: 150 points</p><p align=\"center\">Spectate: 200 points</p><p align=\"center\"><br/></p><p align=\"center\"><br/></p></body></html>", None))
+        self.filler1.setText(QCoreApplication.translate("coupons", u"<html><head/><body><p align=\"center\">0</p></body></html>", None))
+        self.sumpoint.setText(QCoreApplication.translate("coupons", u"<html><head/><body><p align=\"center\">Your Points :</p></body></html>", None))
+        self.label.setText(QCoreApplication.translate("coupons", u"<html><head/><body><p align=\"center\">Enter the amount of points you want to convert:</p></body></html>", None))
+        self.label_2.setText(QCoreApplication.translate("coupons", u"<html><head/><body><p>-Services Cost:</p><p><br/></p><p align=\"center\">Advice: 50 points per hour</p><p align=\"center\">Lecture: 150 points per hour</p><p align=\"center\">Spectate: 200 points per hour</p><p align=\"center\"><br/></p><p align=\"center\"><br/></p></body></html>", None))
         self.label_3.setText(QCoreApplication.translate("coupons", u"Coupon                Points               Status", None))
         self.History.setText(QCoreApplication.translate("coupons", u"History", None))
-        self.generate.setText(QCoreApplication.translate("coupons", u" Generate Coupon", None))
-        self.infobtn.setText(QCoreApplication.translate("coupons", u"Information", None))
-        self.backv.setText(QCoreApplication.translate("coupons", u"Back", None))
         self.error.setText("")
+        self.backv.setText(QCoreApplication.translate("coupons", u"Back", None))
+        self.generate.setText(QCoreApplication.translate("coupons", u"Generate Coupon", None))
+        self.infobtn.setText(QCoreApplication.translate("coupons", u"Information", None))
     # retranslateUi
 

@@ -86,7 +86,7 @@ class loginWindow(QWidget, Ui_login):
     loginFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        #self.ui=Ui_login()
+        self.loginSucessFlag = False
         self.setupUi(self)
         self.back.clicked.connect(self.gohome)
         self.loginL.clicked.connect(self.loginfunc)
@@ -117,6 +117,8 @@ class loginWindow(QWidget, Ui_login):
         self.windowA.show()
 
     def loginfunc(self):
+
+
         user = self.usernameLF.text()
         password = self.passwordLF.text()
 
@@ -138,6 +140,7 @@ class loginWindow(QWidget, Ui_login):
             if result_pass == password:
                 print("Successfully logged in.")
                 self.label_2.setText("Successfully logged in.")
+                self.loginSucessFlag=True
                 print(result_pass)
 
                 if result_prof == 'Admin':
@@ -170,7 +173,11 @@ class volunteerServicesWindow(QWidget, Ui_vServices):
         self.servicesTable.itemClicked.connect(self.serviceSelectedChanged)
 
 
-
+    def paintEvent(self, event):
+        self.tile = QPixmap("volunteerBG.png")
+        painter = QPainter(self)
+        painter.drawTiledPixmap(self.rect(), self.tile)
+        super(Ui_vServices, self)
 
 
     def goVolunteer(self):
@@ -241,6 +248,7 @@ class volunteerServicesWindow(QWidget, Ui_vServices):
             self.studentList.addItem(item)
             counter=counter+1
         self.numStudents.setText(str(counter))
+
 
 
 """------------------------------------------------------------------------------------------------------------------------------------
@@ -456,7 +464,7 @@ class consumerServicesWindow(QWidget, Ui_stChoices):
         self.signupButton.clicked.connect(self.signupService)
 
     def paintEvent(self, event):
-        self.tile = QPixmap("consumerSBG.jpg")
+        self.tile = QPixmap("consumerBG.jpg")
         painter = QPainter(self)
         painter.drawTiledPixmap(self.rect(), self.tile)
         super(Ui_stChoices, self)
@@ -679,10 +687,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     welcomeFlag=True
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.ui=Ui_MainWindow()
-        self.ui.setupUi(self)
-        self.ui.login.clicked.connect(self.gotologin)
-        self.ui.createacc.clicked.connect(self.gotoSignup)
+        self.setupUi(self)
+        self.login.clicked.connect(self.gotologin)
+        self.createacc.clicked.connect(self.gotoSignup)
 
     def paintEvent(self, event):
         self.tile = QPixmap("welcomeBG.jpg")
@@ -972,6 +979,12 @@ class couponWindow(QWidget, Ui_coupons):
         self.generate.clicked.connect(self.generateCoupon)
         self.error.setStyleSheet('color:red')
 
+    def paintEvent(self, event):
+        self.tile = QPixmap("volunteerBG.png")
+        painter = QPainter(self)
+        painter.drawTiledPixmap(self.rect(), self.tile)
+        super(Ui_coupons, self)
+
     def generateCoupon(self):
         couponStringBank = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
         c = random.choice(couponStringBank)
@@ -1000,7 +1013,10 @@ class couponWindow(QWidget, Ui_coupons):
         row = (uv.points, uv.username)
         cur.execute(query, row)
         print('Updated')
+        self.filler1.setText(str(uv.points))
         db.commit()
+        self.initList()
+        self.update()
 
     def goVolunteer(self):
         self.windowV = volunteerWindow()

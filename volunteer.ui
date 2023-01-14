@@ -14,7 +14,8 @@
    <string>volunteerprofile</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QFrame
+   <string notr="true">color:rgb(152, 152, 152);
+QFrame
 {
 background:rgba(6, 16, 28, 0.8);
 border-radius:15px;

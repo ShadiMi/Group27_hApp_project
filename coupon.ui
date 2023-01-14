@@ -16,10 +16,10 @@
   <widget class="QLabel" name="filler1">
    <property name="geometry">
     <rect>
-     <x>180</x>
+     <x>190</x>
      <y>50</y>
      <width>71</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -29,10 +29,13 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+    <string notr="true">color:white;
+text-align:center;
+background:rgba(6, 16, 28,1);
+border-radius:15px;</string>
    </property>
    <property name="text">
-    <string>0</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="sumpoint">
@@ -41,7 +44,7 @@
      <x>50</x>
      <y>50</y>
      <width>131</width>
-     <height>23</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -51,19 +54,22 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">background:setAttribute(Qt::WA_TranslucentBackground)</string>
+    <string notr="true">color:white;
+text-align:center;
+background:rgba(6, 16, 28,1);
+border-radius:15px;</string>
    </property>
    <property name="text">
-    <string>Your Points :</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Your Points :&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>100</y>
-     <width>451</width>
-     <height>21</height>
+     <y>90</y>
+     <width>411</width>
+     <height>31</height>
     </rect>
    </property>
    <property name="font">
@@ -72,8 +78,14 @@
      <bold>true</bold>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color:white;
+text-align:center;
+background:rgba(6, 16, 28,1);
+border-radius:15px;</string>
+   </property>
    <property name="text">
-    <string>Enter the amount of points you want to convert:</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Enter the amount of points you want to convert:&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="scaledContents">
     <bool>false</bool>
@@ -82,7 +94,7 @@
   <widget class="QLineEdit" name="ptsF">
    <property name="geometry">
     <rect>
-     <x>470</x>
+     <x>480</x>
      <y>100</y>
      <width>81</width>
      <height>20</height>
@@ -105,7 +117,7 @@
     </rect>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="info">
     <widget class="QLabel" name="label_2">
@@ -123,8 +135,14 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color:white;
+text-align:center;
+background:rgba(6, 16, 28,1);
+border-radius:15px;</string>
+     </property>
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Services Cost:&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Advice: 50 points per hour&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Lecture: 150 points per hour&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Spectate: 200 points per hour&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;-Services Cost:&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Advice: 50 points per hour&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Lecture: 150 points per hour&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Spectate: 200 points per hour&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -157,6 +175,9 @@
        <bold>true</bold>
       </font>
      </property>
+     <property name="styleSheet">
+      <string notr="true">color:rgb(194, 194, 194)</string>
+     </property>
      <property name="text">
       <string>Coupon                Points               Status</string>
      </property>
@@ -172,34 +193,45 @@
      <height>71</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>11</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgb(0, 140, 227);
+}</string>
+   </property>
    <property name="text">
     <string>History</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="generate">
+  <widget class="QLabel" name="error">
    <property name="geometry">
     <rect>
-     <x>470</x>
-     <y>130</y>
-     <width>121</width>
-     <height>31</height>
+     <x>570</x>
+     <y>100</y>
+     <width>171</width>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string> Generate Coupon</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="infobtn">
-   <property name="geometry">
-    <rect>
-     <x>170</x>
-     <y>270</y>
-     <width>141</width>
-     <height>71</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Information</string>
+    <string/>
    </property>
   </widget>
   <widget class="QPushButton" name="backv">
@@ -207,25 +239,113 @@
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>75</width>
-     <height>23</height>
+     <width>91</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>century gothic</family>
+     <pointsize>14</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgb(0, 140, 227);
+}</string>
    </property>
    <property name="text">
     <string>Back</string>
    </property>
   </widget>
-  <widget class="QLabel" name="error">
+  <widget class="QPushButton" name="generate">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>100</y>
-     <width>291</width>
-     <height>16</height>
+     <x>480</x>
+     <y>130</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>11</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgb(0, 140, 227);
+}</string>
+   </property>
    <property name="text">
-    <string/>
+    <string>Generate Coupon</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="infobtn">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>260</y>
+     <width>141</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Segoe UI</family>
+     <pointsize>11</pointsize>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton
+{
+color:white;
+border-radius:10px;
+}
+QPushButton:hover
+{
+color:#333;
+border-radius:10px;
+background:#49ebff;
+}
+QPushButton
+
+{
+background:rgb(0, 140, 227);
+}</string>
+   </property>
+   <property name="text">
+    <string>Information</string>
    </property>
   </widget>
  </widget>

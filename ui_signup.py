@@ -29,10 +29,6 @@ class Ui_create(object):
 "background:rgba(6, 16, 28, 0.8);\n"
 "border-radius:15px;\n"
 "}")
-        self.back2 = QPushButton(create)
-        self.back2.setObjectName(u"back2")
-        self.back2.setGeometry(QRect(9, 9, 75, 23))
-        self.back2.setAutoFillBackground(False)
         self.bgframe = QFrame(create)
         self.bgframe.setObjectName(u"bgframe")
         self.bgframe.setGeometry(QRect(490, 200, 381, 321))
@@ -164,6 +160,26 @@ class Ui_create(object):
         self.splitter_6.setObjectName(u"splitter_6")
         self.splitter_6.setGeometry(QRect(0, 0, 0, 0))
         self.splitter_6.setOrientation(Qt.Horizontal)
+        self.back2 = QPushButton(create)
+        self.back2.setObjectName(u"back2")
+        self.back2.setGeometry(QRect(0, 10, 101, 31))
+        self.back2.setFont(font3)
+        self.back2.setStyleSheet(u"QPushButton\n"
+"{\n"
+"color:white;\n"
+"border-radius:10px;\n"
+"}\n"
+"QPushButton:hover\n"
+"{\n"
+"color:#333;\n"
+"border-radius:10px;\n"
+"background:#49ebff;\n"
+"}\n"
+"QPushButton\n"
+"\n"
+"{\n"
+"background:skyblue;\n"
+"}")
 
         self.retranslateUi(create)
 
@@ -172,7 +188,6 @@ class Ui_create(object):
 
     def retranslateUi(self, create):
         create.setWindowTitle(QCoreApplication.translate("create", u"signup", None))
-        self.back2.setText(QCoreApplication.translate("create", u"Back", None))
         self.error.setText("")
         self.signupL.setText(QCoreApplication.translate("create", u"<html><head/><body><p><span style=\" color:#c2c2c2;\">Signup</span></p></body></html>", None))
         self.usernameRF.setPlaceholderText(QCoreApplication.translate("create", u"Enter Your Name ", None))
@@ -189,5 +204,6 @@ class Ui_create(object):
         self.pwcR.setText(QCoreApplication.translate("create", u"<html><head/><body><p><span style=\" color:#c2c2c2;\">Password Confirm </span></p></body></html>", None))
         self.profR.setText(QCoreApplication.translate("create", u"<html><head/><body><p><span style=\" color:#c2c2c2;\">Profile</span></p></body></html>", None))
         self.signupR.setText(QCoreApplication.translate("create", u"Sign-up", None))
+        self.back2.setText(QCoreApplication.translate("create", u"Back", None))
     # retranslateUi
 
