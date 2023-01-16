@@ -19,7 +19,6 @@ from ui_admin import Ui_Admin
 from ui_coupon import Ui_coupons
 from ui_changeinfo import Ui_changeprofile
 from ui_consumerServices import Ui_stChoices
-
 import Person
 import random
 
@@ -117,8 +116,6 @@ class loginWindow(QWidget, Ui_login):
         self.windowA.show()
 
     def loginfunc(self):
-
-
         user = self.usernameLF.text()
         password = self.passwordLF.text()
 
