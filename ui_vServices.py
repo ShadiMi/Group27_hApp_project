@@ -238,6 +238,13 @@ class Ui_vServices(object):
 "{\n"
 "background:rgb(0, 140, 227);\n"
 "}")
+        self.label_7 = QLabel(vServices)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setGeometry(QRect(20, 180, 301, 31))
+        self.label_7.setStyleSheet(u"color:white;\n"
+"text-align:center;\n"
+"background:rgba(6, 16, 28,1);\n"
+"border-radius:15px;")
 
         self.retranslateUi(vServices)
 
@@ -276,5 +283,6 @@ class Ui_vServices(object):
         self.pushButton_5.setText(QCoreApplication.translate("vServices", u"Length:\n"
 "(in hrs)", None))
         self.addService.setText(QCoreApplication.translate("vServices", u"Add Service", None))
+        self.label_7.setText(QCoreApplication.translate("vServices", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:600;\">Enter service details you want to add:</span></p></body></html>", None))
     # retranslateUi
 
